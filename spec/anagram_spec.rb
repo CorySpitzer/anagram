@@ -7,4 +7,13 @@ describe('String#anagram_of?') do
     expect('act'.anagram_of?('cat')).to(eq(true))
   end
 
+  # handles a multi-word sentence
+  it('handles a multi-word string with spaces') do
+    expect('eat me'.anagram_of?('meat e')).to(eq(true))
+  end
+
+  # doesn't work for words that are not anagrams of each other
+  it('returns false if words are not anagrams') do
+    expect('abc'.anagram_of?('cat')).to(eq(false))
+  end
 end
