@@ -16,4 +16,17 @@ describe('String#anagram_of?') do
   it('returns false if words are not anagrams') do
     expect('abc'.anagram_of?('cat')).to(eq(false))
   end
+
+  # Two blank words are vacuously true
+  it('returns true for two empty strings') do
+    expect(''.anagram_of?('')).to(eq(true))
+  end
+
 end
+
+# describe('String#anagrams') do
+#
+#   it() do
+#
+#   end
+# end
