@@ -1,3 +1,5 @@
+require('pry')
+
 class String
   define_method(:anagram_of?) do |word|
     word.split('').sort() == self.split('').sort()
@@ -7,7 +9,7 @@ class String
     compare_word = self
     words.each_with_index() do |word, index|
       if compare_word.anagram_of?(word) == false
-        words.pop(index)
+        words.delete_at(index)
       end
     end
     words
