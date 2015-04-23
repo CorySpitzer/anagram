@@ -31,7 +31,7 @@ describe('String#anagrams') do
   end
 
   # handles multi-word list
-  it('handles a one word array') do
+  it('handles a multi-word array') do
     expect('cat'.anagrams(['tac', 'eat', 'act'])).to(eq(['tac', 'act']))
   end
 end
