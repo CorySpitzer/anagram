@@ -29,4 +29,9 @@ describe('String#anagrams') do
   it('handles a one word array') do
     expect('cat'.anagrams(['tac'])).to(eq(['tac']))
   end
+
+  # handles multi-word list
+  it('handles a one word array') do
+    expect('cat'.anagrams(['tac', 'eat', 'act'])).to(eq(['tac', 'act']))
+  end
 end
