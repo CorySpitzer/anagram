@@ -24,9 +24,9 @@ describe('String#anagram_of?') do
 
 end
 
-# describe('String#anagrams') do
-#
-#   it() do
-#
-#   end
-# end
+describe('String#anagrams') do
+  # handles a one word list
+  it('handles a one word array') do
+    expect('cat'.anagrams(['tac'])).to(eq(['tac']))
+  end
+end
